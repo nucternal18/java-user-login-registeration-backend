@@ -13,7 +13,7 @@ import javax.mail.internet.MimeMessage;
 
 @Service
 @AllArgsConstructor
-public class EnableService implements EmailSender{
+public class EmailService implements EmailSender{
     private final static Logger LOGGER = LoggerFactory
             .getLogger(EmailService.class);
 
@@ -29,7 +29,7 @@ public class EnableService implements EmailSender{
             helper.setText(email, true);
             helper.setTo(to);
             helper.setSubject("Confirm your email");
-            helper.setFrom("hello@amigoscode.com");
+            helper.setFrom("adewoyin@aolausoro.tech");
             mailSender.send(mimeMessage);
         } catch (MessagingException e) {
             LOGGER.error("failed to send email", e);
